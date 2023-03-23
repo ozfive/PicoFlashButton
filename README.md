@@ -32,3 +32,27 @@ Then to convert the picoflashbutton.elf file into a binary file format (picoflas
 ```shell
 arm-none-eabi-objcopy -O binary picoflashbutton.elf picoflashbutton.bin
 ```
+
+To use picoprobe with picoflashbutton.bin, you can follow these steps:
+
+1. Connect your Raspberry Pi Pico to your computer using a USB cable.
+
+2. Install the picoprobe software on your computer by following the instructions provided on the official Raspberry Pi Pico documentation.
+
+3. Connect the picoprobe to your Raspberry Pi Pico by connecting the GND, SWDIO, and SWCLK pins of the picoprobe to the corresponding pins on the Raspberry Pi Pico.
+
+4. Open a terminal window and navigate to the directory where the picoflashbutton.bin file is located.
+
+5. Use the picoprobe tool to flash the binary file to the Raspberry Pi Pico by running the following command:
+
+```shell
+picoprobe load picoflashbutton.bin
+```
+
+6. Once the binary file is loaded onto the Raspberry Pi Pico, you can reset the board by pressing the reset button on the board or by running the following command in the terminal:
+
+```shell
+picoprobe reset
+```
+
+7. The program should now be running on the Raspberry Pi Pico, and you can interact with it using the button connected to GP21.
