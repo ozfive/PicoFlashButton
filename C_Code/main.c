@@ -1,6 +1,11 @@
 #include "pico.h"
 #include "pico/stdlib.h"
 
+#include "alarm.h"
+#include "button.h"
+#include "gpio.h"
+
+
 extern void _start();
 extern void button_isr();
 extern void alarm_isr();
