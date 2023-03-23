@@ -1,9 +1,9 @@
 #include "pico.h"
 #include "pico/stdlib.h"
 
-#include "alarm.h"
-#include "button.h"
-#include "gpio.h"
+#include "Header_Files/alarm.h"
+#include "Header_Files/button.h"
+#include "Header_Files/gpio.h"
 
 
 extern void _start();
