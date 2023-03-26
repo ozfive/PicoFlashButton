@@ -11,7 +11,7 @@ alarm_init:
     ldr r0, =0xe000e010  @ Load address of SysTick control and status register
     mov r1, #0x00000004  @ Set clock source to processor clock, enable SysTick interrupt
     str r1, [r0, #0x00]  @ Write to the control register to configure SysTick
-    ldr r1, =0x00400000  @ Set the reload value to 1 second
+    ldr r1, =0x07EC23FF  @ Set the reload value to 1 second if clock speed of processor is 133MHz
     str r1, [r0, #0x04]  @ Write to the reload value register
     bx lr                @ Return from function
 
